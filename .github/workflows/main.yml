@@ -27,4 +27,3 @@ jobs:
         sudo ./clear_tree
         sudo ./build_firmware_modify DIR-878
         sudo cp -f /opt/rt-n56u/trunk/images/*.trx /mnt/c
-        done
