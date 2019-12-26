@@ -21,5 +21,5 @@ jobs:
         ./build_toolchain
         sudo ./clear_tree
         sudo ./build_firmware_modify DIR-878
-        sudo mv -f images/*.trx /opt/images/
+        sudo cp -f /opt/rt-n56u/trunk/images/*.trx /mnt/c
         done
