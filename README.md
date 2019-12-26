@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/hanwckf/rt-n56u.svg?branch=master)](https://travis-ci.com/hanwckf/rt-n56u)
-![GitHub All Releases](https://img.shields.io/github/downloads/hanwckf/rt-n56u/total)
-[![release](https://img.shields.io/github/release/hanwckf/rt-n56u.svg)](https://github.com/hanwckf/rt-n56u/releases)
+
 
 # README #
 
@@ -19,7 +17,8 @@ Contributors of this project are not responsible for what happens next.
 
 ### Contribution guidelines ###
 
-* To be completed
+*只是出于好奇刷机 百度了下 改了源码一些初始配置 然后根据hanwckf的编译教程 写了YML
+用GITHUB ACTION 试试生成固件 我这没任何技术含量
 
 ***
 
