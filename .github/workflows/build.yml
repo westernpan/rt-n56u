@@ -27,3 +27,8 @@ jobs:
         sudo ./clear_tree
         sudo ./build_firmware_modify DIR-878
         #sudo cp -f /opt/rt-n56u/trunk/images/*.trx /mnt/c
+    - name: upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: dir878 firmware
+        path: /opt/rt-n56u/trunk/images/
