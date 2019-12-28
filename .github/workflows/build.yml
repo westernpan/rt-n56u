@@ -1,8 +1,8 @@
 name: CI
 
-on: push
-  #schedule:
-    #- cron: 0 10 * * 5
+on:
+  schedule:
+    - cron: 0 10 * * 5
 
 jobs:
   build:
