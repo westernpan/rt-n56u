@@ -1,8 +1,8 @@
 name: CI
 
-on:
-  schedule:
-    - cron: 0 10 * * 5
+on: push
+  #schedule:
+    #- cron: 0 10 * * 5
 
 jobs:
   build:
@@ -29,13 +29,13 @@ jobs:
         #tar -xvf mipsel-linux-uclibc.tar.xz -C toolchain-3.4.x
     - name: Compress
       run: |
-        tar cvf toolchain-3.4.x.tar toolchain-3.4.x/
-        xz -z toolchain-3.4.x.tar
+        tar cvf mipsel-linux-uclibc.tar mipsel-linux-uclibc/
+        xz -z mipsel-linux-uclibc.tar
     - name: Upload toolchain
       uses: actions/upload-artifact@master
       with:
           name: toolchain
-          path: /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x.tar.xz
+          path: /opt/rt-n56u/toolchain-mipsel/mipsel-linux-uclibc.tar.xz
     - name: Build firmware
       run: |
         cd /opt/rt-n56u/trunk
