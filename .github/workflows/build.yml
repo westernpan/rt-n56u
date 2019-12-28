@@ -46,4 +46,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: dir878 firmware
-        path: /opt/rt-n56u/trunk/images/
+        path: /opt/rt-n56u/trunk/images/*.trx
