@@ -15,9 +15,9 @@ jobs:
       run: |
         # 对于deb系 (debian/ubuntu)：
         sudo apt update
-        sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
+        sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
         cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
-        pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
+        pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev
         git clone --depth=1 https://github.com/westernpan/rt-n56u.git /opt/rt-n56u
     - name: Compile
       run: |
@@ -31,7 +31,7 @@ jobs:
       run: |
         cd /opt/rt-n56u/trunk
         sudo ./clear_tree
-        sudo ./build_firmware_modify DIR-878
+        fakeroot ./build_firmware_modify DIR-878
         #sudo cp -f /opt/rt-n56u/trunk/images/*.trx /mnt/c
     - name: upload artifact
       uses: actions/upload-artifact@v1
